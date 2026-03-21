@@ -5,20 +5,20 @@ SID4SRec is a sequential recommendation framework that integrates **Diffusion-ba
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **Diffusion-Based Augmentation**: Uses a Gaussian Diffusion process to generate semantically consistent augmented sequences (`aug_seq1`, `aug_seq2`) by denoising latent item representations.
 - **Sequence-Level Contrastive Learning**: Implements InfoNCE loss on diffusion-augmented sequences to capture robust user intent.
 - **Item-Level Contrastive Learning**: Leverages item metadata (Category/Brand) with an instance-weighting threshold ($\phi$) to filter false negatives and refine item embeddings.
 - **Context-Aware Backbone**: A SASRec-style Transformer architecture that fuses Item ID, Category, and Brand embeddings into a unified representation.
 
-## 🛠️ Environment Setup
+## Environment Setup
 
 - Python 3.8+
 - PyTorch 2.0.0+
 - Requirements: `pip install -r requirements.txt`
 
-## 🏃 Quick Start
+## Quick Start
 
 To train and evaluate the model on a specific dataset (e.g., Beauty):
 
@@ -32,7 +32,7 @@ python main.py --dataset Beauty --model_name diffsas --gpu_id 0
 - `--beta`: Weight for Diffusion NLL loss.
 - `--phi`: Instance weighting threshold for Item-level CL (filtering false negatives).
 
-## 📂 Project Structure
+## Project Structure
 
 - `main.py`: Entry point for training and evaluation.
 - `models/sid4srec.py`: Core implementation of the SID4SRec architecture.
