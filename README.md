@@ -11,6 +11,7 @@ SID4SRec is a sequential recommendation framework that integrates **Diffusion-ba
 - **Sequence-Level Contrastive Learning**: Implements InfoNCE loss on diffusion-augmented sequences to capture robust user intent.
 - **Item-Level Contrastive Learning**: Leverages item metadata (Category/Brand) with an instance-weighting threshold ($\phi$) to filter false negatives and refine item embeddings.
 - **Context-Aware Backbone**: A SASRec-style Transformer architecture that fuses Item ID, Category, and Brand embeddings into a unified representation.
+- **Distance-based Negative Filtering**: At both the sequence and item levels, preventing semantically similar sequences or items from being incorrectly treated as negatives.
 
 ## Environment Setup
 
